@@ -34,15 +34,15 @@ namespace LifeQuest
 
         // Player methods
         // Roll dice for birthplace
-        private string RollDiceForBirthPlace()
-        {
+        // private string RollDiceForBirthPlace()
+        // {
 
-        }
+        // }
 
-        public string TransitionToNextStage()
-        {
+        // public string TransitionToNextStage()
+        // {
 
-        }
+        // }
 
     }
 }
