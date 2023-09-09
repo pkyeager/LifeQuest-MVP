@@ -21,6 +21,8 @@ namespace LifeQuest
             TextDisplayHelper.SlowlyDisplayText("Welcome to LifeQuest!");
             TextDisplayHelper.SlowlyDisplayText("Press any key to start the game. Have fun!");
             Console.ReadKey();
+            Player player = new Player();
+            player.createPlayer();
         }
 
         public void SetOutputDelay(int milliseconds) // method to set the delay for text output

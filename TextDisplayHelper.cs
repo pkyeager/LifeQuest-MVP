@@ -16,6 +16,7 @@ namespace LifeQuest
                 Console.Write(letter);
                 Thread.Sleep(delayMilliseconds);
             }
+         Console.WriteLine();
         }
     }
 }

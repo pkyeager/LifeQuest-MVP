@@ -47,13 +47,13 @@ namespace LifeQuest
             TextDisplayHelper.SlowlyDisplayText("What is your last name?");
             lastName = Console.ReadLine();
 
-            // Roll dice for birthplace (you can implement this logic)
+            // Roll dice for birthplace
             // BirthPlace = RollDiceForBirthPlace();
             Console.WriteLine("Player created! Press any key to continue.");
             // Display player information
             TextDisplayHelper.SlowlyDisplayText("Character created!");
-            TextDisplayHelper.SlowlyDisplayText($"Name: {firstName} {lastName}");
-            TextDisplayHelper.SlowlyDisplayText($"Gender: {gender}");
+            TextDisplayHelper.SlowlyDisplayText($@"Name: {firstName} {lastName}");
+            TextDisplayHelper.SlowlyDisplayText($@"Gender:  {gender}");
             // SlowlyDisplayText($"Birthplace: {BirthPlace}", delayMilliseconds);
 
 
