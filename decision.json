@@ -1,0 +1,114 @@
+[
+    {
+        "lifeStage": "Infancy and Early Childhood",
+        "decisions": [
+            {
+                "text": "Breastfeeding/formula feeding",
+                "lifeExpectancyImpact": 1
+            },
+            {
+                "text": "Balanced diet",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "Malnutrition",
+                "lifeExpectancyImpact": -2
+            },
+            {
+                "text": "Vaccinations",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "No vaccinations",
+                "lifeExpectancyImpact": -2
+            }
+        ]
+    },
+    {
+        "lifeStage": "Adolescence",
+        "decisions": [
+            {
+                "text": "No drug use",
+                "lifeExpectancyImpact": 1
+            },
+            {
+                "text": "Drug use",
+                "lifeExpectancyImpact": -3
+            },
+            {
+                "text": "High School Graduate",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "Drop out of school",
+                "lifeExpectancyImpact": -2
+            },
+            {
+                "text": "Regular Exercise",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "Sedentary Lifestyle",
+                "lifeExpectancyImpact": -1
+            },
+            {
+                "text": "Positive Social Life",
+                "lifeExpectancyImpact": 1
+            },
+            {
+                "text": "Negative Social Life",
+                "lifeExpectancyImpact": -1
+            }
+        ]
+    },
+    {
+        "lifeStage": "Adulthood",
+        "decisions": [
+            {
+                "text": "Successful Career",
+                "lifeExpectancyImpact": 3
+            },
+            {
+                "text": "Unsuccessful Career",
+                "lifeExpectancyImpact": -1
+            },
+            {
+                "text": "Happy Family Life",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "Strained Family Relationship",
+                "lifeExpectancyImpact": -1
+            },
+            {
+                "text": "Good Financial Management",
+                "lifeExpectancyImpact": 3
+            },
+            {
+                "text": "Financial Troubles",
+                "lifeExpectancyImpact": -2
+            }
+        ]
+    },
+    {
+        "lifeStage": "End of Life",
+        "decisions": [
+            {
+                "text": "Regular Physical Activity",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "Poor Heath and Inactivity",
+                "lifeExpectancyImpact": -3
+            },
+            {
+                "text": "Healthy Diet",
+                "lifeExpectancyImpact": 2
+            },
+            {
+                "text": "Poor Diet",
+                "lifeExpectancyImpact": -1
+            }
+        ]
+    }
+]

@@ -22,6 +22,27 @@ namespace LifeQuest
         public bool endGameFitness { get; set; }
         public bool endGameNutrition { get; set; }
 
+        // Player constructor
+        public Player(string firstName, string lastName, string gender)
+        {
+            firstName = firstName;
+            lastName = lastName;
+            gender = gender;
+            birthPlace = RollDiceForBirthPlace();
+            stage = "Infancy and Early Childhood";
+        }
+
+        // Player methods
+        // Roll dice for birthplace
+        private string RollDiceForBirthPlace()
+        {
+
+        }
+
+        public string TransitionToNextStage()
+        {
+
+        }
 
     }
 }
