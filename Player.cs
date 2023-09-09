@@ -7,7 +7,7 @@ namespace LifeQuest
         // Player attributes
         public string firstName { get; set; }
         public string lastName { get; set; }
-        public int gender { get; set; }
+        public string gender { get; set; }
         public string birthPlace { get; set; }
         public string stage { get; set; }
         public bool breastfeeding { get; set; }
@@ -21,6 +21,43 @@ namespace LifeQuest
         public bool goodFinance { get; set; }
         public bool endGameFitness { get; set; }
         public bool endGameNutrition { get; set; }
+
+        // Player constructor
+
+        public Player()
+        {
+            firstName = string.Empty;
+            lastName = string.Empty;
+            birthPlace = string.Empty;
+            stage = "Infancy and Early Childhood";
+        }
+
+
+        public void createPlayer()
+        {
+            // Choose gender
+            TextDisplayHelper.SlowlyDisplayText("Choose your gender (Male/Female): ");
+            gender = Console.ReadLine();
+
+            // Ask for first name
+            TextDisplayHelper.SlowlyDisplayText("What is your first name?");
+            firstName = Console.ReadLine();
+
+            // Ask for last name
+            TextDisplayHelper.SlowlyDisplayText("What is your last name?");
+            lastName = Console.ReadLine();
+
+            // Roll dice for birthplace (you can implement this logic)
+            // BirthPlace = RollDiceForBirthPlace();
+            Console.WriteLine("Player created! Press any key to continue.");
+            // Display player information
+            TextDisplayHelper.SlowlyDisplayText("Character created!");
+            TextDisplayHelper.SlowlyDisplayText($"Name: {firstName} {lastName}");
+            TextDisplayHelper.SlowlyDisplayText($"Gender: {gender}");
+            // SlowlyDisplayText($"Birthplace: {BirthPlace}", delayMilliseconds);
+
+
+        }
 
         // Player constructor
         // public Player(string firstName, string lastName, string gender)

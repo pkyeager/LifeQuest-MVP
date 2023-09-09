@@ -8,6 +8,7 @@ namespace LifeQuest
 
         private static int delayMilliseconds = 50; // init delay to 50ms
 
+
         static void Main(string[] args) // entry point for program
         {
             Game game = new Game();
@@ -17,8 +18,8 @@ namespace LifeQuest
         public void StartGame() // method to start the game
         {
             SetOutputDelay(delayMilliseconds); // set the delay for text output
-            SlowlyDisplayText("Welcome to LifeQuest!");
-            SlowlyDisplayText("Press any key to continue...");
+            TextDisplayHelper.SlowlyDisplayText("Welcome to LifeQuest!");
+            TextDisplayHelper.SlowlyDisplayText("Press any key to start the game. Have fun!");
             Console.ReadKey();
         }
 
@@ -27,15 +28,6 @@ namespace LifeQuest
             delayMilliseconds = milliseconds; // set the delay to the value passed in
         }
 
-        public void SlowlyDisplayText(string text) // method to slowly display text
-        {
-            foreach (char letter in text)
-            {
-                Console.Write(letter);
-                Thread.Sleep(delayMilliseconds); // sleep for the delay in milliseconds
-            }
 
-            Console.WriteLine();
-        }
     }
 }
