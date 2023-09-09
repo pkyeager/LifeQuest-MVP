@@ -4,23 +4,29 @@
         "decisions": [
             {
                 "text": "Breastfeeding/formula feeding",
-                "lifeExpectancyImpact": 1
+                "lifeExpectancyImpact": 1,
+                "description": "You are a baby. You need to eat. You got breast milk or formula."
             },
             {
                 "text": "Balanced diet",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "Your parents fed you a balanced diet. They are good parents."
             },
             {
                 "text": "Malnutrition",
-                "lifeExpectancyImpact": -2
+                "lifeExpectancyImpact": -2,
+                "description": "Your parents didn't feed you a balanced diet. They couldn't afford it."
+
             },
             {
                 "text": "Vaccinations",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "You got vaccinated. You won't get sick."
             },
             {
                 "text": "No vaccinations",
-                "lifeExpectancyImpact": -2
+                "lifeExpectancyImpact": -2,
+                "description": "You didn't get vaccinated. You got sick."
             }
         ]
     },
@@ -29,35 +35,43 @@
         "decisions": [
             {
                 "text": "No drug use",
-                "lifeExpectancyImpact": 1
+                "lifeExpectancyImpact": 1,
+                "description": "You didn't do drugs. You are a good kid."
             },
             {
                 "text": "Drug use",
-                "lifeExpectancyImpact": -3
+                "lifeExpectancyImpact": -3,
+                "description": "You did drugs. Smoking, drinking, and drugs are bad for you."
             },
             {
                 "text": "High School Graduate",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "You graduated high school. You worked hard and maybe also you're smart."
             },
             {
                 "text": "Drop out of school",
-                "lifeExpectancyImpact": -2
+                "lifeExpectancyImpact": -2,
+                "description": "You dropped out of school. You didn't like it or maybe you weren't ready to work hard."
             },
             {
                 "text": "Regular Exercise",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "You exercised regularly. You are healthy."
             },
             {
                 "text": "Sedentary Lifestyle",
-                "lifeExpectancyImpact": -1
+                "lifeExpectancyImpact": -1,
+                "description": "Exercise is a waste of time. You are lazy."
             },
             {
                 "text": "Positive Social Life",
-                "lifeExpectancyImpact": 1
+                "lifeExpectancyImpact": 1,
+                "description": "You have a good social life. You have friends."
             },
             {
                 "text": "Negative Social Life",
-                "lifeExpectancyImpact": -1
+                "lifeExpectancyImpact": -1,
+                "description": "You have a bad social life. You don't have friends."
             }
         ]
     },
@@ -66,27 +80,33 @@
         "decisions": [
             {
                 "text": "Successful Career",
-                "lifeExpectancyImpact": 3
+                "lifeExpectancyImpact": 3,
+                "description": "You have a successful career. You are rich."
             },
             {
                 "text": "Unsuccessful Career",
-                "lifeExpectancyImpact": -1
+                "lifeExpectancyImpact": -1,
+                "description": "You have an unsuccessful career. You are poor."
             },
             {
                 "text": "Happy Family Life",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "You have a happy family life. You have a spouse and kids."
             },
             {
                 "text": "Strained Family Relationship",
-                "lifeExpectancyImpact": -1
+                "lifeExpectancyImpact": -1,
+                "description": "You have a strained family relationship. You don't have a spouse or kids."
             },
             {
                 "text": "Good Financial Management",
-                "lifeExpectancyImpact": 3
+                "lifeExpectancyImpact": 3,
+                "description": "You are good at managing your money. You are rich."
             },
             {
                 "text": "Financial Troubles",
-                "lifeExpectancyImpact": -2
+                "lifeExpectancyImpact": -2,
+                "description": "You are bad at managing your money. You are poor."
             }
         ]
     },
@@ -95,19 +115,23 @@
         "decisions": [
             {
                 "text": "Regular Physical Activity",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "You exercised regularly. You are healthy."
             },
             {
                 "text": "Poor Heath and Inactivity",
-                "lifeExpectancyImpact": -3
+                "lifeExpectancyImpact": -3,
+                "description": "You didn't exercise regularly. You are unhealthy."
             },
             {
                 "text": "Healthy Diet",
-                "lifeExpectancyImpact": 2
+                "lifeExpectancyImpact": 2,
+                "description": "You ate a healthy diet. You are healthy."
             },
             {
                 "text": "Poor Diet",
-                "lifeExpectancyImpact": -1
+                "lifeExpectancyImpact": -1,
+                "description": "You ate a poor diet. You are unhealthy."
             }
         ]
     }
