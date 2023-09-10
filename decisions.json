@@ -4,29 +4,43 @@
         "decisions": [
             {
                 "text": "Breastfeeding/formula feeding",
-                "lifeExpectancyImpact": 1,
-                "description": "You are a baby. You need to eat. You got breast milk or formula."
+                "question": "Did you receive breast milk or formula as a baby?",
+                "yesText": "You got breast milk or formula.",
+                "yesLifeExpectancyImpact": 1,
+                "yesDescription": "You are a baby. You need to eat. You got breast milk or formula.",
+                "noText": "You didn't get breast milk or formula.",
+                "noLifeExpectancyImpact": -1,
+                "noDescription": "You didn't receive breast milk or formula as a baby."
             },
             {
                 "text": "Balanced diet",
-                "lifeExpectancyImpact": 2,
-                "description": "Your parents fed you a balanced diet. They are good parents."
-            },
-            {
-                "text": "Malnutrition",
-                "lifeExpectancyImpact": -2,
-                "description": "Your parents didn't feed you a balanced diet. They couldn't afford it."
-
+                "question": "Did your parents feed you a balanced diet?",
+                "yesText": "Your parents fed you a balanced diet. They are good parents.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "Your parents fed you a balanced diet. They are good parents.",
+                "noText": "Your parents didn't feed you a balanced diet. They couldn't afford it.",
+                "noLifeExpectancyImpact": -2,
+                "noDescription": "Your parents didn't feed you a balanced diet. They couldn't afford it."
             },
             {
                 "text": "Vaccinations",
-                "lifeExpectancyImpact": 2,
-                "description": "You got vaccinated. You won't get sick."
+                "question": "Were you vaccinated as a baby?",
+                "yesText": "You got vaccinated. You won't get sick.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "You got vaccinated. You won't get sick.",
+                "noText": "You didn't get vaccinated. You got sick.",
+                "noLifeExpectancyImpact": -2,
+                "noDescription": "You didn't get vaccinated. You got sick."
             },
             {
                 "text": "No vaccinations",
-                "lifeExpectancyImpact": -2,
-                "description": "You didn't get vaccinated. You got sick."
+                "question": "Were you not vaccinated as a baby?",
+                "yesText": "You didn't get vaccinated. You got sick.",
+                "yesLifeExpectancyImpact": -2,
+                "yesDescription": "You didn't get vaccinated. You got sick.",
+                "noText": "You got vaccinated. You won't get sick.",
+                "noLifeExpectancyImpact": 2,
+                "noDescription": "You got vaccinated. You won't get sick."
             }
         ]
     },
@@ -35,43 +49,43 @@
         "decisions": [
             {
                 "text": "No drug use",
-                "lifeExpectancyImpact": 1,
-                "description": "You didn't do drugs. You are a good kid."
-            },
-            {
-                "text": "Drug use",
-                "lifeExpectancyImpact": -3,
-                "description": "You did drugs. Smoking, drinking, and drugs are bad for you."
+                "question": "Did you avoid using drugs during adolescence?",
+                "yesText": "You didn't do drugs. You are a good kid.",
+                "yesLifeExpectancyImpact": 1,
+                "yesDescription": "You didn't do drugs. You are a good kid.",
+                "noText": "You did drugs. Smoking, drinking, and drugs are bad for you.",
+                "noLifeExpectancyImpact": -3,
+                "noDescription": "You did drugs. Smoking, drinking, and drugs are bad for you."
             },
             {
                 "text": "High School Graduate",
-                "lifeExpectancyImpact": 2,
-                "description": "You graduated high school. You worked hard and maybe also you're smart."
-            },
-            {
-                "text": "Drop out of school",
-                "lifeExpectancyImpact": -2,
-                "description": "You dropped out of school. You didn't like it or maybe you weren't ready to work hard."
+                "question": "Did you graduate high school?",
+                "yesText": "You graduated high school. You worked hard and maybe also you're smart.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "You graduated high school. You worked hard and maybe also you're smart.",
+                "noText": "You dropped out of school. You didn't like it or maybe you weren't ready to work hard.",
+                "noLifeExpectancyImpact": -2,
+                "noDescription": "You dropped out of school. You didn't like it or maybe you weren't ready to work hard."
             },
             {
                 "text": "Regular Exercise",
-                "lifeExpectancyImpact": 2,
-                "description": "You exercised regularly. You are healthy."
-            },
-            {
-                "text": "Sedentary Lifestyle",
-                "lifeExpectancyImpact": -1,
-                "description": "Exercise is a waste of time. You are lazy."
+                "question": "Did you exercise regularly during adolescence?",
+                "yesText": "You exercised regularly. You are healthy.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "You exercised regularly. You are healthy.",
+                "noText": "You had a sedentary lifestyle. Exercise is a waste of time. You are lazy.",
+                "noLifeExpectancyImpact": -1,
+                "noDescription": "You had a sedentary lifestyle. Exercise is a waste of time. You are lazy."
             },
             {
                 "text": "Positive Social Life",
-                "lifeExpectancyImpact": 1,
-                "description": "You have a good social life. You have friends."
-            },
-            {
-                "text": "Negative Social Life",
-                "lifeExpectancyImpact": -1,
-                "description": "You have a bad social life. You don't have friends."
+                "question": "Did you have a positive social life during adolescence?",
+                "yesText": "You had a good social life. You have friends.",
+                "yesLifeExpectancyImpact": 1,
+                "yesDescription": "You had a good social life. You have friends.",
+                "noText": "You had a negative social life. You don't have friends.",
+                "noLifeExpectancyImpact": -1,
+                "noDescription": "You had a negative social life. You don't have friends."
             }
         ]
     },
@@ -80,33 +94,33 @@
         "decisions": [
             {
                 "text": "Successful Career",
-                "lifeExpectancyImpact": 3,
-                "description": "You have a successful career. You are rich."
-            },
-            {
-                "text": "Unsuccessful Career",
-                "lifeExpectancyImpact": -1,
-                "description": "You have an unsuccessful career. You are poor."
+                "question": "Did you have a successful career in adulthood?",
+                "yesText": "You have a successful career. You are rich.",
+                "yesLifeExpectancyImpact": 3,
+                "yesDescription": "You have a successful career. You are rich.",
+                "noText": "You have an unsuccessful career. You are poor.",
+                "noLifeExpectancyImpact": -1,
+                "noDescription": "You have an unsuccessful career. You are poor."
             },
             {
                 "text": "Happy Family Life",
-                "lifeExpectancyImpact": 2,
-                "description": "You have a happy family life. You have a spouse and kids."
-            },
-            {
-                "text": "Strained Family Relationship",
-                "lifeExpectancyImpact": -1,
-                "description": "You have a strained family relationship. You don't have a spouse or kids."
+                "question": "Did you have a happy family life in adulthood?",
+                "yesText": "You have a happy family life. You have a spouse and kids.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "You have a happy family life. You have a spouse and kids.",
+                "noText": "You have a strained family relationship. You don't have a spouse or kids.",
+                "noLifeExpectancyImpact": -1,
+                "noDescription": "You have a strained family relationship. You don't have a spouse or kids."
             },
             {
                 "text": "Good Financial Management",
-                "lifeExpectancyImpact": 3,
-                "description": "You are good at managing your money. You are rich."
-            },
-            {
-                "text": "Financial Troubles",
-                "lifeExpectancyImpact": -2,
-                "description": "You are bad at managing your money. You are poor."
+                "question": "Were you good at managing your money in adulthood?",
+                "yesText": "You are good at managing your money. You are rich.",
+                "yesLifeExpectancyImpact": 3,
+                "yesDescription": "You are good at managing your money. You are rich.",
+                "noText": "You are bad at managing your money. You are poor.",
+                "noLifeExpectancyImpact": -2,
+                "noDescription": "You are bad at managing your money. You are poor."
             }
         ]
     },
@@ -115,23 +129,23 @@
         "decisions": [
             {
                 "text": "Regular Physical Activity",
-                "lifeExpectancyImpact": 2,
-                "description": "You exercised regularly. You are healthy."
-            },
-            {
-                "text": "Poor Heath and Inactivity",
-                "lifeExpectancyImpact": -3,
-                "description": "You didn't exercise regularly. You are unhealthy."
+                "question": "Did you exercise regularly in your later years?",
+                "yesText": "You exercised regularly. You are healthy.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "You exercised regularly. You are healthy.",
+                "noText": "You didn't exercise regularly. You are unhealthy.",
+                "noLifeExpectancyImpact": -3,
+                "noDescription": "You didn't exercise regularly. You are unhealthy."
             },
             {
                 "text": "Healthy Diet",
-                "lifeExpectancyImpact": 2,
-                "description": "You ate a healthy diet. You are healthy."
-            },
-            {
-                "text": "Poor Diet",
-                "lifeExpectancyImpact": -1,
-                "description": "You ate a poor diet. You are unhealthy."
+                "question": "Did you maintain a healthy diet in your later years?",
+                "yesText": "You ate a healthy diet. You are healthy.",
+                "yesLifeExpectancyImpact": 2,
+                "yesDescription": "You ate a healthy diet. You are healthy.",
+                "noText": "You ate a poor diet. You are unhealthy.",
+                "noLifeExpectancyImpact": -1,
+                "noDescription": "You ate a poor diet. You are unhealthy."
             }
         ]
     }
