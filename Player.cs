@@ -52,13 +52,15 @@ namespace LifeQuest
             TextDisplayHelper.SlowlyDisplayText("........");
             birthPlace = RollDiceForBirthPlace();
             Console.WriteLine("Player created! Press any key to continue.");
+            Console.ReadKey();
             // Display player information
             TextDisplayHelper.SlowlyDisplayText("Character created!");
             TextDisplayHelper.SlowlyDisplayText($@"Name: {firstName} {lastName}");
             TextDisplayHelper.SlowlyDisplayText($@"Gender:  {gender}");
-            TextDisplayHelper.SlowlyDisplayText($"Birthplace: {birthPlace}");
-
-
+            TextDisplayHelper.SlowlyDisplayText($@"Birthplace: {birthPlace}");
+            TextDisplayHelper.SlowlyDisplayText($@"Your current Stage: {stage}");
+            TextDisplayHelper.SlowlyDisplayText("Press any key to continue as a Infant.");
+            Console.ReadKey();
         }
 
 

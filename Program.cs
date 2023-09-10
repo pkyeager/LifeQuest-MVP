@@ -6,7 +6,7 @@ namespace LifeQuest
     class Game
     {
 
-        private static int delayMilliseconds = 50; // init delay to 50ms
+        public static int delayMilliseconds = 50; // init delay to 50ms
 
 
         static void Main(string[] args) // entry point for program
@@ -23,6 +23,11 @@ namespace LifeQuest
             Console.ReadKey();
             Player player = new Player();
             player.createPlayer();
+            Stage stage = new Stage();
+            Stage.InfancyAndEarlyChildhoodStage();
+            Stage.AdolescenceStage();
+            Stage.AdulthoodStage();
+            Stage.EndOfLifeStage();
         }
 
         public void SetOutputDelay(int milliseconds) // method to set the delay for text output
