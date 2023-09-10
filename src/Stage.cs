@@ -2,8 +2,14 @@ using System;
 
 namespace LifeQuest
 {
-    class Stage
+    public class Stage
     {
+
+        // Attributes 
+        public string lifeStage { get; set; }
+        public List<Decision> decisions { get; set; }
+
+
         // Infancy and Early Childhood
         public static void InfancyAndEarlyChildhoodStage()
         {
