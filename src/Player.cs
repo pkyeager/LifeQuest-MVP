@@ -36,8 +36,32 @@ namespace LifeQuest
         public void createPlayer()
         {
             // Choose gender
-            TextDisplayHelper.SlowlyDisplayText("Choose your gender (Male/Female): ");
-            gender = Console.ReadLine();
+            string gender = string.Empty;
+
+            // While Null or Empty (no value)...
+            while (string.IsNullOrEmpty(gender))
+            {
+                TextDisplayHelper.SlowlyDisplayText("Choose your gender (Male/Female): ");
+                string genderInput = Console.ReadLine().Trim(); // Trim whitespace
+
+                // Check if the input is "male" or "female" ignore case
+                if (string.Equals(genderInput, "male", StringComparison.OrdinalIgnoreCase))
+                {
+                    gender = "Male";
+                }
+                else if (string.Equals(genderInput, "female", StringComparison.OrdinalIgnoreCase))
+                {
+                    gender = "Female";
+                }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'Male' or 'Female'.");
+                }
+            }
+
+            // At this point, 'gender' will contain a valid value ('Male' or 'Female')
+            TextDisplayHelper.SlowlyDisplayText($"You selected {gender} as your gender.");
+
 
             // Ask for first name
             TextDisplayHelper.SlowlyDisplayText("What is your first name?");
@@ -90,7 +114,6 @@ namespace LifeQuest
         }
 
 
-        // }
 
         // public string TransitionToNextStage()
         // {
