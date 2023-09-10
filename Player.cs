@@ -48,31 +48,45 @@ namespace LifeQuest
             lastName = Console.ReadLine();
 
             // Roll dice for birthplace
-            // BirthPlace = RollDiceForBirthPlace();
+            TextDisplayHelper.SlowlyDisplayText("God starts rolling the dice for your birthplace...");
+            TextDisplayHelper.SlowlyDisplayText("........");
+            birthPlace = RollDiceForBirthPlace();
             Console.WriteLine("Player created! Press any key to continue.");
             // Display player information
             TextDisplayHelper.SlowlyDisplayText("Character created!");
             TextDisplayHelper.SlowlyDisplayText($@"Name: {firstName} {lastName}");
             TextDisplayHelper.SlowlyDisplayText($@"Gender:  {gender}");
-            // SlowlyDisplayText($"Birthplace: {BirthPlace}", delayMilliseconds);
+            TextDisplayHelper.SlowlyDisplayText($"Birthplace: {birthPlace}");
 
 
         }
 
-        // Player constructor
-        // public Player(string firstName, string lastName, string gender)
-        // {
-        //     firstName = firstName;
-        //     lastName = lastName;
-        //     gender = gender;
-        //     birthPlace = RollDiceForBirthPlace();
-        //     stage = "Infancy and Early Childhood";
-        // }
 
         // Player methods
+
         // Roll dice for birthplace
-        // private string RollDiceForBirthPlace()
-        // {
+        private string RollDiceForBirthPlace()
+        {
+            Random random = new Random();
+            int roll = random.Next(1, 6); // Generates a random number between 1 and 5 (inclusive).
+
+            switch (roll)
+            {
+                case 1:
+                    return "Africa";
+                case 2:
+                    return "Asia";
+                case 3:
+                    return "Europe";
+                case 4:
+                    return "North America";
+                case 5:
+                    return "South America";
+                default:
+                    return "Unknown"; // Handle any unexpected rolls.
+            }
+        }
+
 
         // }
 
