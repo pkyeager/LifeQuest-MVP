@@ -68,13 +68,33 @@ namespace LifeQuest
             TextDisplayHelper.SlowlyDisplayText($"You selected {gender} as your gender.");
 
 
-            // Ask for first name
-            TextDisplayHelper.SlowlyDisplayText("What is your first name?");
-            firstName = Console.ReadLine();
+            // Ask for first name (loop until a non-empty value is provided)
+            string firstNameInput;
+            do
+            {
+                TextDisplayHelper.SlowlyDisplayText("What is your first name?");
+                firstNameInput = Console.ReadLine().Trim(); // Trim whitespace
+                if (string.IsNullOrEmpty(firstNameInput))
+                {
+                    TextDisplayHelper.SlowlyDisplayText("First name cannot be empty. Please enter your first name.");
+                }
+            } while (string.IsNullOrEmpty(firstNameInput));
 
-            // Ask for last name
-            TextDisplayHelper.SlowlyDisplayText("What is your last name?");
-            lastName = Console.ReadLine();
+            firstName = firstNameInput;
+
+            // Ask for last name (loop until a non-empty value is provided)
+            string lastNameInput;
+            do
+            {
+                TextDisplayHelper.SlowlyDisplayText("What is your last name?");
+                lastNameInput = Console.ReadLine().Trim(); // Trim whitespace
+                if (string.IsNullOrEmpty(lastNameInput))
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Last name cannot be empty. Please enter your last name.");
+                }
+            } while (string.IsNullOrEmpty(lastNameInput));
+
+            lastName = lastNameInput;
 
             // Roll dice for birthplace
             TextDisplayHelper.SlowlyDisplayText("God starts rolling the dice for your birthplace...");
@@ -85,7 +105,6 @@ namespace LifeQuest
             Console.WriteLine("Player created! Press any key to see your Character.");
             Console.ReadKey();
             // Display player information
-            TextDisplayHelper.SlowlyDisplayText("Character created!");
             TextDisplayHelper.SlowlyDisplayText($@"Name: {firstName} {lastName}");
             TextDisplayHelper.SlowlyDisplayText($@"Gender:  {gender}");
             TextDisplayHelper.SlowlyDisplayText($@"Birthplace: {birthPlace}");
