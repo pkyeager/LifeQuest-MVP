@@ -78,9 +78,9 @@ namespace LifeQuest
 
             // Roll dice for birthplace
             TextDisplayHelper.SlowlyDisplayText("God starts rolling the dice for your birthplace...");
-            TextDisplayHelper.SlowlyDisplayText("........");
+            TextDisplayHelper.SlowlyDisplayText("..................................................");
             birthPlace = RollDiceForBirthPlace();
-            Console.WriteLine("Player created! Press any key to continue.");
+            Console.WriteLine("Player created! Press any key to see your Character.");
             Console.ReadKey();
             // Display player information
             TextDisplayHelper.SlowlyDisplayText("Character created!");

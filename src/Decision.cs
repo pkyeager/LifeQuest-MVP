@@ -27,111 +27,105 @@ namespace LifeQuest
 
         public void RandomFoodBaby(Player player)
         {
-            TextDisplayHelper.SlowlyDisplayText("As a baby, you can't make decisions. So, your parents will make a decision for you.");
+            TextDisplayHelper.SlowlyDisplayText("As a baby, you can't make decisions. So, your parents will decide your first meal.");
+
             Random random = new Random();
             int randomIndex = random.Next(0, 2);
+
             if (randomIndex == 0)
             {
                 player.breastfeeding = true;
                 player.lifeExpectancy += 1;
-                TextDisplayHelper.SlowlyDisplayText("You are now breastfeeding.");
-                TextDisplayHelper.SlowlyDisplayText("You are now healthier.");
-                TextDisplayHelper.SlowlyDisplayText($@" Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
+                TextDisplayHelper.SlowlyDisplayText("Your parents opted for breastfeeding. You started your life as a milk connoisseur!");
+                TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
             }
             else
             {
                 player.breastfeeding = false;
                 player.lifeExpectancy -= 1;
-                TextDisplayHelper.SlowlyDisplayText("You are now not breastfeeding.");
-                TextDisplayHelper.SlowlyDisplayText("You are now less healthier.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
+                TextDisplayHelper.SlowlyDisplayText("Your parents chose formula feeding. You missed out on the milk mustache!");
+                TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
             }
+
+            Console.ReadLine();
         }
+
         public void RandomVaccinationBaby(Player player)
         {
-            TextDisplayHelper.SlowlyDisplayText("As a baby, you can't make decisions. You parents will decide whether you will be vaccinated or not.");
+            TextDisplayHelper.SlowlyDisplayText("Your parents will make a crucial decision: to vaccinate or not to vaccinate.");
+
             Random random = new Random();
             int randomIndex = random.Next(0, 2);
+
             if (randomIndex == 0)
             {
                 player.vaccination = true;
                 player.lifeExpectancy += 2;
-                TextDisplayHelper.SlowlyDisplayText("You are now vaccinated.");
-                TextDisplayHelper.SlowlyDisplayText("You are now healthier.");
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
+                TextDisplayHelper.SlowlyDisplayText("Your parents chose to vaccinate you. You've got that immunity champ status!");
+                TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
             }
             else
             {
                 player.vaccination = false;
                 player.lifeExpectancy -= 2;
-                TextDisplayHelper.SlowlyDisplayText("You are now not vaccinated.");
-                TextDisplayHelper.SlowlyDisplayText("You are now less healthier.");
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
+                TextDisplayHelper.SlowlyDisplayText("Your parents skipped the needles. You might catch a few more colds!");
+                TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
             }
+
+            Console.ReadLine();
         }
+
         public void RandomNutritionBaby(Player player)
         {
-            TextDisplayHelper.SlowlyDisplayText("As a baby, you can't make decisions. You parents will decide whether you will have a good nutrition or not.");
+            TextDisplayHelper.SlowlyDisplayText("Your parents are debating your diet: healthy or not-so-healthy?");
+
             Random random = new Random();
             int randomIndex = random.Next(0, 2);
+
             if (randomIndex == 0)
             {
                 player.balancedDiet = true;
                 player.lifeExpectancy += 2;
-                TextDisplayHelper.SlowlyDisplayText("You are now having a good nutrition.");
-                TextDisplayHelper.SlowlyDisplayText("You are now healthier.");
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
+                TextDisplayHelper.SlowlyDisplayText("Your parents went for a balanced diet. You're off to a nutritious start!");
+                TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
             }
             else
             {
                 player.balancedDiet = false;
                 player.lifeExpectancy -= 2;
-                TextDisplayHelper.SlowlyDisplayText("You are now not having a good nutrition.");
-                TextDisplayHelper.SlowlyDisplayText("You are now less healthier.");
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
+                TextDisplayHelper.SlowlyDisplayText("Your parents favored convenience over nutrition. Fast food it is!");
+                TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
             }
+
+            Console.ReadLine();
         }
+
         public void DoDrugs(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("As a teenager you are now facing a lot of decisions. You are now facing peer pressure. Your friends are asking you to do drugs.");
-            TextDisplayHelper.SlowlyDisplayText("What will you do?");
+
+            TextDisplayHelper.SlowlyDisplayText("As a teenager, peer pressure's on! Your friends want you to try drugs. What's your call?");
 
             do
             {
-                TextDisplayHelper.SlowlyDisplayText("Type 'y' to do drugs or 'n' to not do drugs.");
+                TextDisplayHelper.SlowlyDisplayText("Type 'y' to experiment or 'n' to stay clean.");
                 input = Console.ReadLine().ToLower().Trim();
 
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now doing drugs. Drugs are bad for your health.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now less healthier.");
+                    TextDisplayHelper.SlowlyDisplayText("You went for it! The rebellious years begin. Rock 'n' roll!");
+                    TextDisplayHelper.SlowlyDisplayText("Your body takes a hit, though. Long-term damage is the price.");
                     player.doDrugs = true;
                     player.lifeExpectancy -= 5;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now not doing drugs. You are a good kid.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now healthier.");
+                    TextDisplayHelper.SlowlyDisplayText("You resisted temptation. You're a good kid!");
+                    TextDisplayHelper.SlowlyDisplayText("Your health thanks you, and you gain a few extra years.");
                     player.doDrugs = false;
                     player.lifeExpectancy += 5;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else
                 {
@@ -139,260 +133,298 @@ namespace LifeQuest
                 }
 
             } while (input != "y" && input != "n");
+
+            Console.ReadLine();
         }
 
         public void HighSchool(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("You are now in High School. Do you want to try hard or don't even try to get graduated?");
-            TextDisplayHelper.SlowlyDisplayText("Type 'y' to try hard or 'n' to not try hard.");
+
+            TextDisplayHelper.SlowlyDisplayText("You're in High School now. Are you going to put in the effort to graduate or take it easy?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to aim for graduation or 'n' to cruise through.");
 
             do
             {
                 input = Console.ReadLine().ToLower().Trim();
+
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now trying hard to get graduated.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now more successful.");
+                    TextDisplayHelper.SlowlyDisplayText("You're hitting the books and aiming for that diploma!");
+                    TextDisplayHelper.SlowlyDisplayText("Success is your middle name. You graduate and head to college.");
                     player.graduatedHighSchool = true;
                     player.lifeExpectancy += 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now not trying hard to get graduated.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now less successful.");
+                    TextDisplayHelper.SlowlyDisplayText("You take it easy in high school, no stress!");
+                    TextDisplayHelper.SlowlyDisplayText("Life's not so smooth without a diploma, though. Finding a job is a challenge.");
                     player.graduatedHighSchool = false;
-                    player.lifeExpectancy -= 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    player.lifeExpectancy -= 4;
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
+                }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
                 }
 
             } while (input != "y" && input != "n");
+
+            Console.ReadLine();
         }
 
         public void EarlyFitness(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("You look like you are not fit. Do you want to exercise?");
-            TextDisplayHelper.SlowlyDisplayText("Type 'y' to exercise or 'n' to not exercise.");
+
+            TextDisplayHelper.SlowlyDisplayText("You're not exactly a fitness guru. Time to decide: will you hit the gym?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to exercise or 'n' to stick with Netflix.");
 
             do
             {
                 input = Console.ReadLine().ToLower().Trim();
+
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now exercising.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now more fit.");
+                    TextDisplayHelper.SlowlyDisplayText("You're getting active! Muscles are forming, health is improving.");
                     player.earlyGameFitness = true;
                     player.lifeExpectancy += 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now not exercising.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now less fit.");
+                    TextDisplayHelper.SlowlyDisplayText("Netflix it is! The couch is your best friend.");
+                    TextDisplayHelper.SlowlyDisplayText("Your body might not thank you for this one.");
                     player.earlyGameFitness = false;
                     player.lifeExpectancy -= 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
             } while (input != "y" && input != "n");
 
+            Console.ReadLine();
         }
+
         public void SocialLife(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("Are you interested in having a social life?");
-            TextDisplayHelper.SlowlyDisplayText("Type 'y' to have a social life or 'n' to not have a social life.");
+
+            TextDisplayHelper.SlowlyDisplayText("Ready for some social adventures?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to make friends or 'n' to embrace solitude.");
+
             do
             {
                 input = Console.ReadLine().ToLower().Trim();
+
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now having a social life.");
-                    TextDisplayHelper.SlowlyDisplayText("You have some friends.");
+                    TextDisplayHelper.SlowlyDisplayText("You're a social butterfly! Friends galore!");
                     player.socialLife = true;
                     player.lifeExpectancy += 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now not having a social life.");
-                    TextDisplayHelper.SlowlyDisplayText("You are a bit lonely.");
+                    TextDisplayHelper.SlowlyDisplayText("Solitude it is. Just you and your thoughts.");
+                    TextDisplayHelper.SlowlyDisplayText("A bit lonely, but your introverted side thrives.");
                     player.socialLife = false;
                     player.lifeExpectancy -= 1;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
             } while (input != "y" && input != "n");
+
+            Console.ReadLine();
         }
-        // Methods for Adulthood Stage
+
         public void Career(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("You are at the point of your life where you have to decide if you want to have a career or not.");
-            TextDisplayHelper.SlowlyDisplayText("Type 'y' to have a career or 'n' to not have a career.");
+
+            TextDisplayHelper.SlowlyDisplayText("Time to decide: career or no career?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to pursue a career or 'n' to skip the 9-to-5.");
+
             do
             {
                 input = Console.ReadLine().ToLower().Trim();
+
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now having a career.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now more successful.");
+                    TextDisplayHelper.SlowlyDisplayText("Career it is! Climbing the ladder of success.");
                     player.careerSuccess = true;
                     player.lifeExpectancy += 3;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now not having a career.");
-                    TextDisplayHelper.SlowlyDisplayText("You are now less successful.");
+                    TextDisplayHelper.SlowlyDisplayText("No career path for you. Embracing the free spirit life!");
+                    TextDisplayHelper.SlowlyDisplayText("Success is a foreign concept, but you're enjoying the journey.");
                     player.careerSuccess = false;
                     player.lifeExpectancy -= 1;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
             } while (input != "y" && input != "n");
+
+            Console.ReadLine();
         }
 
         public void Family(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("You are at the point of your life where you have to decide if you want to have a family or not.");
-            TextDisplayHelper.SlowlyDisplayText("Type 'y' to have a family or 'n' to not have a family.");
+
+            TextDisplayHelper.SlowlyDisplayText("You've found a partner. Now, family or no family?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to start a family or 'n' to savor the single life.");
+
             do
             {
                 input = Console.ReadLine().ToLower().Trim();
+
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now having a family.");
-                    TextDisplayHelper.SlowlyDisplayText("Family life can be stressful but also somehow beautiful.");
+                    TextDisplayHelper.SlowlyDisplayText("Family life it is! Diapers, sleepless nights, and endless love.");
                     player.happyFamily = true;
                     player.lifeExpectancy += 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are now not having a family.");
-                    TextDisplayHelper.SlowlyDisplayText("You decide to be alone.");
+                    TextDisplayHelper.SlowlyDisplayText("Solo journey, no strings attached.");
+                    TextDisplayHelper.SlowlyDisplayText("You've chosen the path less chaotic.");
                     player.happyFamily = false;
                     player.lifeExpectancy -= 1;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
             } while (input != "y" && input != "n");
+
+            Console.ReadLine();
         }
 
         public void Finance(Player player)
         {
             string input;
-            TextDisplayHelper.SlowlyDisplayText("Financial is import and absolute crucial to prepare for the next phase of life.");
-            TextDisplayHelper.SlowlyDisplayText("Type 'y' to start investing or 'n' to live paycheck to paycheck.");
+
+            TextDisplayHelper.SlowlyDisplayText("Time to manage those finances. Investing or spending?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to invest wisely or 'n' to embrace the spender's life.");
+
             do
             {
                 input = Console.ReadLine().ToLower().Trim();
+
                 if (input == "y")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("You are staring investing.");
-                    TextDisplayHelper.SlowlyDisplayText("You are rich.");
+                    TextDisplayHelper.SlowlyDisplayText("Investment guru in the making! Your wealth is on the rise.");
                     player.goodFinance = true;
                     player.lifeExpectancy += 3;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
                 else if (input == "n")
                 {
-                    TextDisplayHelper.SlowlyDisplayText("Money are there to spend for you. Yolo.");
-                    TextDisplayHelper.SlowlyDisplayText("You are poor.");
+                    TextDisplayHelper.SlowlyDisplayText("Money's here to spend! YOLO all the way.");
+                    TextDisplayHelper.SlowlyDisplayText("Wallet's light, but you've got experiences to cherish.");
                     player.goodFinance = false;
                     player.lifeExpectancy -= 2;
-                    TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                    TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                    Console.ReadLine();
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
                 }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
             } while (input != "y" && input != "n");
+
+            Console.ReadLine();
         }
 
-    // Methods for End of Life Stage
-
-    public void EndGameFitness(Player player)
-    {
-        string input;
-        TextDisplayHelper.SlowlyDisplayText("You are now old. Do you want to exercise?");
-        TextDisplayHelper.SlowlyDisplayText("Type 'y' to exercise or 'n' to not exercise.");
-        do 
+        public void EndGameFitness(Player player)
         {
-            input = Console.ReadLine().ToLower().Trim();
-            if (input == "y")
-            {
-                TextDisplayHelper.SlowlyDisplayText("You are now exercising.");
-                TextDisplayHelper.SlowlyDisplayText("You are now more fit.");
-                player.endGameFitness = true;
-                player.lifeExpectancy += 2;
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
-            }
-            else if (input == "n")
-            {
-                TextDisplayHelper.SlowlyDisplayText("You are now not exercising.");
-                TextDisplayHelper.SlowlyDisplayText("You are now less fit.");
-                player.endGameFitness = false;
-                player.lifeExpectancy -= 3;
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
-            }
-        } while (input != "y" && input != "n");
-    }
+            string input;
 
-    public void EndGameNutrition(Player player)
-    {
-        string input;
-        TextDisplayHelper.SlowlyDisplayText("You are now old. Do you want to have a good nutrition?");
-        TextDisplayHelper.SlowlyDisplayText("Type 'y' to have a good nutrition or 'n' to not have a good nutrition.");
-        do 
+            TextDisplayHelper.SlowlyDisplayText("You're in your golden years. Time to exercise or not?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to stay fit or 'n' to embrace retirement fully.");
+
+            do
+            {
+                input = Console.ReadLine().ToLower().Trim();
+
+                if (input == "y")
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Senior fitness champion! Your body thanks you.");
+                    player.endGameFitness = true;
+                    player.lifeExpectancy += 2;
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
+                }
+                else if (input == "n")
+                {
+                    TextDisplayHelper.SlowlyDisplayText("No more gym days. Relaxation is your new workout.");
+                    TextDisplayHelper.SlowlyDisplayText("Your body may not be thrilled, but your soul is at peace.");
+                    player.endGameFitness = false;
+                    player.lifeExpectancy -= 3;
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
+                }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
+            } while (input != "y" && input != "n");
+
+            Console.ReadLine();
+        }
+
+        public void EndGameNutrition(Player player)
         {
-            input = Console.ReadLine().ToLower().Trim();
-            if (input == "y")
+            string input;
+
+            TextDisplayHelper.SlowlyDisplayText("You're in your golden years. Healthy eating or indulgence?");
+            TextDisplayHelper.SlowlyDisplayText("Type 'y' to savor a balanced diet or 'n' to enjoy all your favorite treats.");
+
+            do
             {
-                TextDisplayHelper.SlowlyDisplayText("You are now having a good nutrition.");
-                TextDisplayHelper.SlowlyDisplayText("You are now more healthier.");
-                player.endGameNutrition = true;
-                player.lifeExpectancy += 2;
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
-            }
-            else if (input == "n")
-            {
-                TextDisplayHelper.SlowlyDisplayText("You are now not having a good nutrition.");
-                TextDisplayHelper.SlowlyDisplayText("You are now less healthier.");
-                player.endGameNutrition = false;
-                player.lifeExpectancy -= 3;
-                TextDisplayHelper.SlowlyDisplayText($@"Your current life expectancy is {player.lifeExpectancy} years old.");
-                TextDisplayHelper.SlowlyDisplayText("Press any key enter to continue.");
-                Console.ReadLine();
-            }
-        } while (input != "y" && input != "n");
-    }
+                input = Console.ReadLine().ToLower().Trim();
+
+                if (input == "y")
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Senior gourmet enthusiast! Your body's loving the nutrients.");
+                    player.endGameNutrition = true;
+                    player.lifeExpectancy += 2;
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
+                }
+                else if (input == "n")
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Sweets and treats all the way. Life's too short for broccoli.");
+                    TextDisplayHelper.SlowlyDisplayText("Your body might protest, but your taste buds are ecstatic.");
+                    player.endGameNutrition = false;
+                    player.lifeExpectancy -= 3;
+                    TextDisplayHelper.SlowlyDisplayText("Press any key to continue.");
+                }
+                else
+                {
+                    TextDisplayHelper.SlowlyDisplayText("Invalid input. Please enter 'y' or 'n'.");
+                }
+
+            } while (input != "y" && input != "n");
+
+            Console.ReadLine();
+        }
     }
 
 
