@@ -6,7 +6,7 @@ namespace LifeQuest
     class Game
     {
 
-        public static int delayMilliseconds = 50; // init delay to 50ms
+        public static int delayMilliseconds = 25; // init delay var to 50ms
 
 
         static void Main(string[] args) // entry point for program
@@ -19,7 +19,11 @@ namespace LifeQuest
         {
             SetOutputDelay(delayMilliseconds); // set the delay for text output
             TextDisplayHelper.SlowlyDisplayText("Welcome to LifeQuest!");
-            TextDisplayHelper.SlowlyDisplayText("Press any key to start the game. Have fun!");
+            TextDisplayHelper.SlowlyDisplayText("Congratulations! You're about to embark on the journey of a lifetime.");
+            TextDisplayHelper.SlowlyDisplayText("In this game, you'll navigate the twists and turns of life,");
+            TextDisplayHelper.SlowlyDisplayText("making choices that will shape your destiny.");
+            TextDisplayHelper.SlowlyDisplayText("Get ready to laugh, cry, and experience the rollercoaster that is life.");
+            TextDisplayHelper.SlowlyDisplayText("Press any key to start the game. Have a blast!");
             Console.ReadKey();
             Player player = new Player();
             player.createPlayer();

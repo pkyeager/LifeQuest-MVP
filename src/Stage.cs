@@ -22,37 +22,58 @@ namespace LifeQuest
         // Infancy and Early Childhood
         public static void InfancyAndEarlyChildhoodStage(Player player)
         {
-            TextDisplayHelper.SlowlyDisplayText("You are now in the Infancy and Early Childhood stage.");
+            TextDisplayHelper.SlowlyDisplayText("You find yourself in the Infancy and Early Childhood stage.");
+
             Decision decision = new Decision();
+
+            // Randomly determine food choice for infancy
             decision.RandomFoodBaby(player);
+
+            // Randomly determine vaccination choice for infancy
             decision.RandomVaccinationBaby(player);
+
+            // Randomly determine nutrition choice for infancy
             decision.RandomNutritionBaby(player);
-            TextDisplayHelper.SlowlyDisplayText("You finished your first years of life. You are becoming an Adolescence.");
-            TextDisplayHelper.SlowlyDisplayText("Your parents gave their best to raise you. You are now ready to face the world.");
+
+            TextDisplayHelper.SlowlyDisplayText("You've survived your first years of life, and now you're growing into adolescence.");
+            TextDisplayHelper.SlowlyDisplayText("Your parents did their best to raise you, and now it's time to face the world.");
+
+            Console.ReadLine();
         }
 
         // Adolescence
         public static void AdolescenceStage(Player player)
         {
             Decision decision = new Decision();
-            TextDisplayHelper.SlowlyDisplayText("You are now in the Adolescence stage.");
-            TextDisplayHelper.SlowlyDisplayText("Now you are becoming an Adult. You are feeling like one of them.");
+
+            TextDisplayHelper.SlowlyDisplayText("You've entered the Adolescence stage.");
+            TextDisplayHelper.SlowlyDisplayText("You're starting to feel like an adult and facing new challenges.");
+
+            // Make choices for adolescence
             decision.DoDrugs(player);
             decision.EarlyFitness(player);
             decision.SocialLife(player);
             decision.HighSchool(player);
 
+            Console.ReadLine();
         }
 
         // Adulthood
         public static void AdulthoodStage(Player player)
         {
             Decision decision = new Decision();
-            TextDisplayHelper.SlowlyDisplayText("You are now in the Adulthood stage.");
+
+            TextDisplayHelper.SlowlyDisplayText("Welcome to the Adulthood stage.");
+            TextDisplayHelper.SlowlyDisplayText("Life is calling, and you have important decisions to make.");
+
+            // Make choices for adulthood
             decision.Career(player);
             decision.Family(player);
             decision.Finance(player);
+
+            Console.ReadLine();
         }
+
 
         // End of Life
         public static void EndOfLifeStage(Player player)
@@ -173,8 +194,9 @@ namespace LifeQuest
 
 
             Decision decision = new Decision();
-            TextDisplayHelper.SlowlyDisplayText("You are now in the End of Life stage.");
-            TextDisplayHelper.SlowlyDisplayText("You are now old and ready to die. You are now ready to meet your creator.");
+            TextDisplayHelper.SlowlyDisplayText("You find yourself in the End of Life stage.");
+            TextDisplayHelper.SlowlyDisplayText("You're now old and ready to embark on your final journey.");
+            TextDisplayHelper.SlowlyDisplayText("It's time to make some last choices that will determine your final moments.");
             decision.EndGameFitness(player);
             decision.EndGameNutrition(player);
             TextDisplayHelper.SlowlyDisplayText("Press any key to see the summary.");

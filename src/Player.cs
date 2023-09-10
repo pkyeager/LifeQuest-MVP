@@ -2,7 +2,7 @@ using System;
 
 namespace LifeQuest
 {
-    public class  Player
+    public class Player
     {
         // Player attributes
         public string firstName { get; set; }
@@ -79,7 +79,9 @@ namespace LifeQuest
             // Roll dice for birthplace
             TextDisplayHelper.SlowlyDisplayText("God starts rolling the dice for your birthplace...");
             TextDisplayHelper.SlowlyDisplayText("..................................................");
-            birthPlace = RollDiceForBirthPlace();
+            string birthPlace = RollDiceForBirthPlace();
+            // int lifeExpectancyModifier = AdjustLifeExpectancyBasedOnBirthPlace(Player,birthPlace);
+            // Player.lifeExpectancy += lifeExpectancyModifier;
             Console.WriteLine("Player created! Press any key to see your Character.");
             Console.ReadKey();
             // Display player information
@@ -117,7 +119,41 @@ namespace LifeQuest
                 default:
                     return "Unknown"; // Handle any unexpected rolls.
             }
+
         }
+
+        // Adjust life expectancy based on birthplace
+        // private int AdjustLifeExpectancyBasedOnBirthPlace(Player player,string birthPlace)
+        // {
+        //     int lifeExpectancyModifier = 0;
+
+        //     switch (birthPlace.ToLower())
+        //     {
+        //         case "Africa":
+        //             lifeExpectancyModifier += -5; // Example: Life expectancy is lower in Africa.
+        //             break;
+        //         case "Asia":
+        //             lifeExpectancyModifier += -3; // Example: Life expectancy is slightly lower in Asia.
+        //             break;
+        //         case "Europe":
+        //             lifeExpectancyModifier += 3; // Example: Life expectancy is higher in Europe.
+        //             break;
+        //         case "North America":
+        //             lifeExpectancyModifier += 2; // Example: Life expectancy is slightly higher in North America.
+        //             break;
+        //         case "South America":
+        //             lifeExpectancyModifier += 1; // Example: Life expectancy in South America.
+        //             break;
+        //         default:
+        //             lifeExpectancyModifier += 0; // Default modifier if birthplace is unknown.
+        //             break;
+        //     }
+
+        //     return lifeExpectancyModifier;
+        // }
+
+
+
 
         // Don't need this method now 
         // public void Summary(Player player)
