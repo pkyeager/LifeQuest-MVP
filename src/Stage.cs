@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LifeQuest
 {
@@ -6,13 +8,21 @@ namespace LifeQuest
     {
 
         // Attributes 
-        public string lifeStage { get; set; }
-        public List<Decision> decisions { get; set; }
+        // public string lifeStage { get; set; }
+        // public static List<Decision> decisions { get; set; }
+
+        // Constructor
+        // public Stage()
+        // {
+
+        //     decisions = new List<Decision>();
+        // }
 
 
         // Infancy and Early Childhood
         public static void InfancyAndEarlyChildhoodStage()
         {
+            // LoadDecisionsForStage("Infancy and Early Childhood");
             TextDisplayHelper.SlowlyDisplayText("You are now in the Infancy and Early Childhood stage.");
             TextDisplayHelper.SlowlyDisplayText("You finished your first year of life. You are becoming an Adolescence.");
             TextDisplayHelper.SlowlyDisplayText("Press any enter to continue.");
@@ -46,5 +56,12 @@ namespace LifeQuest
             TextDisplayHelper.SlowlyDisplayText("Press any enter to continue.");
             Console.ReadLine();
         }
+
+        // Method to load the decisions for a specific stage
+        // public void  LoadDecisionsForStage(string stage)
+        // {
+        //     DecisionDataLoader dataLoader = new DecisionDataLoader();
+        //     decisions = dataLoader.LoadDecisionsForStage(stage);
+        // }
     }
 }
