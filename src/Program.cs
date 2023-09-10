@@ -24,10 +24,11 @@ namespace LifeQuest
             Player player = new Player();
             player.createPlayer();
             Stage stage = new Stage();
-            Stage.InfancyAndEarlyChildhoodStage();
-            Stage.AdolescenceStage();
-            Stage.AdulthoodStage();
-            Stage.EndOfLifeStage();
+            Stage.InfancyAndEarlyChildhoodStage(player);
+            Stage.AdolescenceStage(player);
+            Stage.AdulthoodStage(player);
+            Stage.EndOfLifeStage(player);
+            // Player.Summary(player);
         }
 
         public void SetOutputDelay(int milliseconds) // method to set the delay for text output

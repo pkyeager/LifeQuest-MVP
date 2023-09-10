@@ -2,7 +2,7 @@ using System;
 
 namespace LifeQuest
 {
-    class Player
+    public class  Player
     {
         // Player attributes
         public string firstName { get; set; }
@@ -10,7 +10,10 @@ namespace LifeQuest
         public string gender { get; set; }
         public string birthPlace { get; set; }
         public string stage { get; set; }
+        public int lifeExpectancy { get; set; }
         public bool breastfeeding { get; set; }
+
+        public bool vaccination { get; set; }
         public bool balancedDiet { get; set; }
         public bool doDrugs { get; set; }
         public bool graduatedHighSchool { get; set; }
@@ -48,10 +51,12 @@ namespace LifeQuest
                 if (string.Equals(genderInput, "male", StringComparison.OrdinalIgnoreCase))
                 {
                     gender = "Male";
+                    lifeExpectancy = 80;
                 }
                 else if (string.Equals(genderInput, "female", StringComparison.OrdinalIgnoreCase))
                 {
                     gender = "Female";
+                    lifeExpectancy = 85;
                 }
                 else
                 {
@@ -83,6 +88,7 @@ namespace LifeQuest
             TextDisplayHelper.SlowlyDisplayText($@"Gender:  {gender}");
             TextDisplayHelper.SlowlyDisplayText($@"Birthplace: {birthPlace}");
             TextDisplayHelper.SlowlyDisplayText($@"Your current Stage: {stage}");
+            TextDisplayHelper.SlowlyDisplayText($@"Your current Life Expectancy: {lifeExpectancy}");
             TextDisplayHelper.SlowlyDisplayText("Press any key to continue as a Infant.");
             Console.ReadKey();
         }
@@ -112,6 +118,15 @@ namespace LifeQuest
                     return "Unknown"; // Handle any unexpected rolls.
             }
         }
+
+        // Don't need this method now 
+        // public void Summary(Player player)
+        // {
+        //     TextDisplayHelper.SlowlyDisplayText("Summary of your life:");
+        //     TextDisplayHelper.SlowlyDisplayText($@"{player.firstName} {player.lastName} You have 
+        //     lived your life as you wanted. You were born in {player.birthPlace} and you have lived 
+        //     until {player.lifeExpectancy} years old. As a child you were {player.breastfeeding} breastfed,");
+        // }
 
 
 
