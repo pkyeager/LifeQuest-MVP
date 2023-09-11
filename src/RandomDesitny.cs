@@ -87,14 +87,4 @@
 //             lifeExpectancy -= 7;
 //         }
 //     }
-
-//         // Destiny constructor
-
-
-//         // Destiny methods
-
-
-//      // Roll dice for Destiny
-
-
 // }
